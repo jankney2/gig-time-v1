@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import {withRouter} from 'react-router-dom'
 
-export default class NavBar extends Component {
+class NavBar extends Component {
 
   constructor() {
     super()
@@ -20,9 +21,10 @@ changeHandler= (e)=> {
 
 }
 
-// fireLogin= ()=> {
-
-// }
+fireLogin= ()=> {
+//if the login comes back correct, then push to userDashboard, else display error 
+this.props.history.push('/userDashboard')
+}
 
   render() {
     return(
@@ -30,7 +32,7 @@ changeHandler= (e)=> {
 <input type="email" name="emailInput" placeholder='email' onChange={this.changeHandler}/>
 <input type="password" name="passInput" placeholder='password' onChange={this.changeHandler}/>
 <button onClick={()=>{
-//  this.fireLogin()
+ this.fireLogin()
 
 
 }}>Login</button>
@@ -41,3 +43,5 @@ changeHandler= (e)=> {
 
 
 }
+
+export default withRouter(NavBar)

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import NavBar from './NavBar'
 
-export default class HomePage extends Component {
+class HomePage extends Component {
 
   
   render() {
@@ -15,3 +15,5 @@ export default class HomePage extends Component {
     )
   }
 }
+
+export default HomePage
