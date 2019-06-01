@@ -28,6 +28,11 @@ massive(CONNECTION_STRING).then( (database)=> {
 
 //endpoints (not done)
 
+//auth
+//app.post('/auth/login, userCtrl.login)
+//app.post('/auth/logout, userCtrl.logout)
+
+//users
 
 // app.get('/users/:id', userCtrl.getUser)
 // app.post('/users/create', userCtrl.createUser)

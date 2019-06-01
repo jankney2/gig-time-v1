@@ -1,11 +1,14 @@
 import React from 'react'
-import {Switch, Route, HashRouter} from 'react-router'
-import Root from './Components/Root'
+import { Switch, Route } from 'react-router'
+import HomePage from './Components/HomePage'
+
+
 
 export default (
-  <Switch>
 
-  <Route exact path='/' component={Root} />
+  <Switch>
+    <Route exact path='/' component={HomePage} />
+    <Route  path='/userDashboard' component={HomePage} />
 
 
   </Switch>
